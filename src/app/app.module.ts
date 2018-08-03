@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+// import { AngularMatModule } from './angular-material.module'
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BookComponent } from './book/book.component';
@@ -63,6 +64,8 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    // AngularMatModule,
+    //
     BrowserAnimationsModule,
     MatInputModule,
     MatTableModule,
@@ -73,6 +76,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule
+    //
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,19 +9,26 @@ describe('BookDetailComponent', () => {
   let component: BookDetailComponent;
   let fixture: ComponentFixture<BookDetailComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    console.log('book-detail beforeEach 1 (async)');
+    await TestBed.configureTestingModule({
       imports: [ RouterTestingModule, ReactiveFormsModule, HttpClientModule ],
       declarations: [ BookDetailComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
-  }));
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(BookDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
+  } );
+
+  beforeEach(() => {
+    console.log('book-detail beforeEach 2 (=>)');
+    // fixture = TestBed.createComponent(BookDetailComponent);
+    // component = fixture.componentInstance;
+    // fixture.detectChanges();
   });
 
   it('should create', () => {

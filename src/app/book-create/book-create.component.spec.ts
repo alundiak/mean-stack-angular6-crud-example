@@ -11,19 +11,26 @@ describe('BookCreateComponent', () => {
   let component: BookCreateComponent;
   let fixture: ComponentFixture<BookCreateComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    console.log('book-create beforeEach 1 (async)');
+    await TestBed.configureTestingModule({
       imports: [ RouterTestingModule, ReactiveFormsModule, HttpClientModule, MatInputModule, BrowserAnimationsModule ],
       declarations: [ BookCreateComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
-  }));
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(BookCreateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
+  });
+
+  beforeEach(() => {
+    console.log('book-create beforeEach 2 (=>)');
+    // fixture = TestBed.createComponent(BookCreateComponent);
+    // component = fixture.componentInstance;
+    // fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -4,6 +4,7 @@ import { ApiService } from './api.service';
 
 describe('ApiService', () => {
   beforeEach(() => {
+    console.log('api-service beforeEach (regular) only one');
     TestBed.configureTestingModule({
       providers: [ApiService, HttpClient, HttpHandler]
     });

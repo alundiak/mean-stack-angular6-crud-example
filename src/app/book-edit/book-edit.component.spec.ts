@@ -11,19 +11,25 @@ describe('BookEditComponent', () => {
   let component: BookEditComponent;
   let fixture: ComponentFixture<BookEditComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    console.log('book-edit beforeEach 1 (async)');
+    await TestBed.configureTestingModule({
       imports: [ RouterTestingModule, ReactiveFormsModule, HttpClientModule, MatInputModule, BrowserAnimationsModule ],
       declarations: [ BookEditComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
-  }));
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(BookEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+  } );
+
+  beforeEach(() => {
+    console.log('book-edit beforeEach 2 (=>)');
+    // fixture = TestBed.createComponent(BookEditComponent);
+    // component = fixture.componentInstance;
+    // fixture.detectChanges();
   });
 
   it('should create', () => {

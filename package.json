@@ -7,7 +7,6 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "lint2": "tslint --project ./",
     "e2e": "ng e2e"
   },
   "private": true,
